@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .div{
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      display: none;
+    }
+    .btn1{
+      width: 100px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div"></div>
+  <button class="btn1" type="button" name="button">按钮</button>
+  <script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('button.btn1').click(function(){
+      $('div.div').show();
+    })
+    $(document).ready(function(){
+      alert("你好，傻逼!");
+    })
+    $(document).ready(function(){
+      alert("你好，傻逼1!");
+    })
+    $(document).ready(function(){
+      alert("你好，傻逼2!");
+    })
+  </script>
+</body>
+</html>

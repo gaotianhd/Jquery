@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" charset="utf-8">
+  <style media="screen">
+    #menu{
+      width: 300px;
+      background: blue;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function(){
+      $('#menu').menu();
+    });
+  </script>
+</head>
+<body>
+  <ul id="menu">
+    <li>
+      <div><a href="#">123</a></div>
+    </li>
+    <li>
+      <div>2</div>
+    </li>
+    <li>
+      <div>3</div>
+      <ul>
+        <li>
+          <div>3-1</div>
+        </li>
+        <li>
+          <div>3-2</div>
+        </li>
+        <li>
+          <div>3-3</div>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <div>4</div>
+    </li>
+    <li>
+      <div>5</div>
+    </li>
+  </ul>
+</body>
+</html>

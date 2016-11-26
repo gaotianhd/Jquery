@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style media="screen">
+        div { border: 1px solid blue; }
+        p { border: 1px solid red; }
+        ul { border: 1px solid black; }
+    </style>
+  <script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("li").bind("click", liclick);
+        $("ul").bind("click", ulclick);
+        $("p").bind("click", pclick);
+        $("#div1").bind("click", divclick);
+        $("span").bind("click", spanclick);
+    });
+    function liclick(event){
+        console.log("li: currentTarget: " + event.currentTarget.tagName + " || target: " + event.target.tagName);
+        event.stopPropagation();
+    }
+    function ulclick(event){
+        console.log("ul: currentTarget: " + event.currentTarget.tagName + " || target: " + event.target.tagName);
+    }
+    function pclick(event){
+        console.log("p: currentTarget: " + event.currentTarget.tagName + " || target: " + event.target.tagName);
+    }
+    function divclick(event){
+        console.log("div: currentTarget: " + event.currentTarget.tagName + " || target: " + event.target.tagName);
+    }
+    function spanclick(event){
+        console.log("div: currentTarget: " + event.currentTarget.tagName + " || target: " + event.target.tagName);
+    }
+    </script>
+
+    <title>jQuery Hello world!</title>
+</head>
+<body>
+    <div id="div1">最外层
+        <p>课程大纲</p>
+        <ul>第一级
+            <li>jQuery课程</li>
+            <li>BootStrap课程</li>
+        </ul>
+        <ul>第二级</ul>
+        <span>和大纲同级</span>
+    </div>
+</body>
+</html>

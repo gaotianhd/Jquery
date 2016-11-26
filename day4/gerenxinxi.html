@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" charset="utf-8">
+  <script type="text/javascript">
+    $(function(){
+
+      $('#btn').button().click(function(){
+        $('#dialog').dialog("open");
+      });
+      $('#dialog').dialog({
+        buttons:[{text:"ok",click:function(){
+          $('#s1').html(+$('#text1').val());
+          $('#s2').html($('#text2').val());
+          $('#s3').html($('#text3').val());
+          $(this).dialog("close");
+        }}],
+        modal:true,
+        autoOpen:false,
+        title:"个人信息",
+        closeOnEscape:true,
+        hide:true,
+        show:true
+        // resizable:true
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>个人信息</h1>
+  <p>姓名：<span id="s1"></span></p>
+  <p>年龄：<span id="s2"></span></p>
+  <p>职业：<span id="s3"></span></p>
+  <a href="#" id="btn">填写信息</a>
+  <div id="dialog">
+    姓名： <input type="text" id="text1">
+    年龄： <input type="text" id="text2">
+    职业： <input type="text" id="text3">
+  </div>
+</body>
+</html>

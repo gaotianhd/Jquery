@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" media="screen" title="no title">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="./Font-Awesome-4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+  <style media="screen">
+    .weixin-top{
+      color:white;
+      float:left;
+      font-size:20px;
+      height:40px;
+      margin-left: 20px;
+      text-align: center;
+      line-height:40px;
+    }
+    .sousuo{
+       color:white;
+       float:right;
+       height:40px;
+       line-height:40px;
+       width:40px;
+       font-size: 20px;
+       /*text-align: center;*/
+    }
+    .sousuo1{
+      font-size: 20px;
+      color: black;
+    }
+    .sousuo2{
+      font-size: 20px;
+      color: white;
+      background: lightblue;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      float: left;
+    }
+   .sousuo3{
+     font-size: 20px;
+     color: black;
+     /*background: lightblue;*/
+     width: 40px;
+     height: 40px;
+     text-align: center;
+     line-height: 40px;
+     float: left;
+     padding: 1px;
+   }
+    .new1{
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: left;
+      font-size: 20px;
+      float: left;
+      margin-left: 10px;
+    }
+    p{
+      height: 0px;
+    }
+    .con{
+      /*border-top: 1px solid black;*/
+      border-bottom: 1px solid #ddd;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div data-role="page" id="page1">
+    <div data-role="header" data-position="fixed" style="background:black;color:white">
+      <span class="weixin-top">微信</span>
+      <i class="fa fa-plus sousuo"></i>
+      <i class="fa fa-search sousuo"></i>
+    </div>
+    <div data-role="content" style="padding:0">
+      <div data-role="controlgroup">
+        <a href="#" data-role="button" style="padding:0"><img src="animal/little_animal_01.png" style="float:left"/><div style="float:left;"><p style="margin:0;float:left">123 <span style="position:absolute;right:0">10月</span></p><p style="float:left;position: absolute;bottom:10px">hahah</p></div></a>
+        <a href="#" data-role="button" style="padding:0"><img src="animal/little_animal_01.png" style="float:left"/><div style="float:left;"><p style="margin:0;float:left">123 <span style="position:absolute;right:0">10月</span></p><p style="float:left;position: absolute;bottom:10px">haha</p></div></a>
+        <a href="#" data-role="button" style="padding:0"><img src="animal/little_animal_01.png" style="float:left"/><div style="float:left;"><p style="margin:0;float:left">123 <span style="position:absolute;right:0">10月</span></p><p style="float:left;position: absolute;bottom:10px">haha</p></div></a>
+      </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="#page1" data-transition="slide"><i class="fa fa-comment-o sousuo1"></i><p>微信</p></a></li>
+          <li><a href="#page2" data-transition="slide"><i class="fa fa-list sousuo1"></i><p>通讯录</p></a></li>
+          <li><a href="#page3" data-transition="slide"><i class="fa fa-bomb sousuo1"></i><p>发现</p></a></li>
+          <li><a href="#page4" data-transition="slide"><i class="fa fa-user sousuo1"></i><p>我</p></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-role='page' id="page2">
+  <div data-role="header" data-position="fixed" style="background:black;color:white">
+    <span class="weixin-top">微信</span>
+    <i class="fa fa-plus sousuo"></i>
+    <i class="fa fa-search sousuo"></i>
+  </div>
+  <div role="main">
+    <div data-role="navbar">
+      <a href="#" style="margin:0"><i class="fa fa-bomb sousuo2"></i><span class="new1">新的朋友</span></a>
+      <a href="#" style="margin:0"><i class="fa fa-bomb sousuo2"></i><span class="new1">群聊</span></a>
+      <a href="#" style="margin:0"><i class="fa fa-bomb sousuo2"></i><span class="new1">标签</span></a>
+      <a href="#" style="margin:0"><i class="fa fa-bomb sousuo2"></i><span class="new1">公众号</span></a>
+      <!-- </div> -->
+      <div style="height:10px;line-height:10px;background:gray;color:white;padding:10px">A</div>
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0"><i class="fa fa-bomb sousuo2" style="background:black;color:gray"></i><span class="new1">大地雷</span></a>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page1" data-transition="slide"><i class="fa fa-comment-o sousuo1"></i><p>微信</p></a></li>
+        <li><a href="#page2" data-transition="slide"><i class="fa fa-list sousuo1"></i><p>通讯录</p></a></li>
+        <li><a href="#page3" data-transition="slide"><i class="fa fa-bomb sousuo1"></i><p>发现</p></a></li>
+        <li><a href="#page4" data-transition="slide"><i class="fa fa-user sousuo1"></i><p>我</p></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role='page' id="page3">
+  <div data-role="header" data-position="fixed" style="background:black;color:white">
+    <span class="weixin-top">微信</span>
+    <i class="fa fa-plus sousuo"></i>
+    <i class="fa fa-search sousuo"></i>
+  </div>
+  <div role="main">
+    <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+    <div data-role="navbar">
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">朋友圈</span></a>
+      <!-- </div> -->
+
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">扫一扫</span></a>
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">摇一摇</span></a>
+      <!-- </div> -->
+
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">附近的人</span></a>
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">漂流瓶</span></a>
+      <!-- </div> -->
+
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">购物</span></a>
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">游戏</span></a>
+    </div>
+    <div style="height:100px;line-height:10px;background:gray;color:white;"></div>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page1" data-transition="slide"><i class="fa fa-comment-o sousuo1"></i><p>微信</p></a></li>
+        <li><a href="#page2" data-transition="slide"><i class="fa fa-list sousuo1"></i><p>通讯录</p></a></li>
+        <li><a href="#page3" data-transition="slide"><i class="fa fa-bomb sousuo1"></i><p>发现</p></a></li>
+        <li><a href="#page4" data-transition="slide"><i class="fa fa-user sousuo1"></i><p>我</p></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div data-role='page' id="page4">
+  <div data-role="header" data-position="fixed" style="background:black;color:white">
+    <span class="weixin-top">微信</span>
+    <i class="fa fa-plus sousuo"></i>
+    <i class="fa fa-search sousuo"></i>
+  </div>
+  <div role="main">
+    <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+    <div data-role="navbar">
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">xxx</span></a>
+      <!-- </div> -->
+
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">相册</span></a>
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">收藏</span></a>
+      <!-- </div> -->
+
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">钱包</span></a>
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">卡卷</span></a>
+      <!-- </div> -->
+
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+
+      <!-- <div data-role="navbar"> -->
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">表情</span></a>
+      <div style="height:10px;line-height:10px;background:gray;color:white;"></div>
+      <a href="#" style="margin:0;padding:5px"><i class="fa fa-bomb sousuo3"></i><span class="new1">设置</span></a>
+    </div>
+    <div style="height:100px;line-height:10px;background:gray;color:white;"></div>
+  </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#page1" data-transition="slide"><i class="fa fa-comment-o sousuo1"></i><p>微信</p></a></li>
+              <li><a href="#page2" data-transition="slide"><i class="fa fa-list sousuo1"></i><p>通讯录</p></a></li>
+              <li><a href="#page3" data-transition="slide"><i class="fa fa-bomb sousuo1"></i><p>发现</p></a></li>
+              <li><a href="#page4" data-transition="slide"><i class="fa fa-user sousuo1"></i><p>我</p></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>删除</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('#name').click(function(){
+        $(this).detach();//删除当前
+      });
+      $('#new1').click(function(){
+        $(this).empty();//删除所有子元素不包含自己
+      });
+      $('#new2').click(function(){
+        $(this).remove();//删除包括自己的所有元素
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="all">
+    <div class="new">123</div>
+    <p class="new">全栈开发</p>
+    <div id="new">北京菜鸟在线</div>
+    <p id="name">点击这里，这一行将被删除</p>
+  </div>
+<p>---------------------------------------</p>
+  <div id="all1">
+   <div id="new1">单击这里, 这一行和下面的子元素将会被删除.
+     <p class="new1">HTML5全栈开发</p>
+   </div>
+   <div class="new1">北京菜鸟在线</div>
+ </div>
+ <p>---------------------------------------</p>
+ <div id="all2">
+     <div id="new2">单击这里, 这一行和下面的子元素将会被删除.
+       <p class="new2">HTML5全栈开发</p>
+     </div>
+     <div class="new2">北京菜鸟在线</div>
+   </div>
+</body>
+</html>

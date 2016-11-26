@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <style media="screen">
+    div{
+      width: 100px;
+      height: 100px;
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-right: 5px;
+      margin-bottom: 20px;
+      float: left;
+      padding: 5px;
+      text-align: center;
+    }
+    .one,.five{background-color: blue;color: black}
+    .two{background-color: rgb(255, 0, 0);color: blue}
+    .three{background-color: rgba(255, 0, 0, 0.5);color: green}
+    .fure{background-color: #eeff00;}
+    #result{border: 1px solid black;height: auto;width: auto;display: inherit;}
+    hr{clear: both;}
+  </style>
+</head>
+<body>
+  <div class="one">点击</div>
+  <div class="two">点击</div>
+  <div class="three">点击</div>
+  <div class="fure">点击</div>
+  <div id="result">点击</div>
+  <hr>
+  <div class="five">点击 我会长</div>
+  <script type="text/javascript">
+    $('div').click(function(){
+      var c = $(this).css("background-color");
+      var f = $(this).css("color");
+      console.log(f);
+      $('#result').html("点击这个div的颜色是：<span style = 'color:"+ f +";'> "+ f +"</span>")
+    });
+    $(".five").click(function(){
+      $(this).css({
+        width:function(index,value){
+          console.log(value);
+          return parseFloat(value) + 10;
+        },height:function(index,value){
+          return parseFloat(value) + 10;
+        }
+      })
+    });
+  </script>
+</body>
+</html>

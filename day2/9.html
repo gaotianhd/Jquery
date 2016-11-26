@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selector Button</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid black;
+        height: auto;
+        width: auto;
+        border-radius: 3px;
+        float: left;
+        display: inline-block;
+    }
+    </style>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+    <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <img id="html">
+    </div>
+    <div>
+        <img id="logo", title="old title!">
+    </div>
+    <div id="text"></div>
+
+    <script>
+    $("#html").attr({
+        src: "./haizei/lufei.jpg",
+        alt: "html logo",
+    });
+    $("#logo").attr("title", function(index, attr){
+        $(this).attr({
+            src: './haizei/lufei1.jpg',
+            alt: 'cainiao logo',
+        });
+        console.log(index);
+        console.log(attr);
+        return index + " - " + attr + " - Photo by logo.";
+    });
+    $("#text").text($("#logo").attr("title"));
+    </script>
+
+</body>
+</html>

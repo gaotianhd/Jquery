@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" charset="utf-8">
+  <style media="screen">
+    div{
+      width: 100px;
+      height: 100px;
+      background: #ccc;
+      border: 1px solid #000;
+      display: none;
+    }
+  </style>
+  <script type="text/javascript">
+  $(function(){
+    $('button').button().click(function(){
+      $('div').show('shake',{direction:'right'},2000,function(){
+        console.log("ok");
+      });
+    });
+  });
+
+  </script>
+</head>
+<body>
+  <button id="btn">显示</button>
+  <hr>
+  <div></div>
+</body>
+</html>

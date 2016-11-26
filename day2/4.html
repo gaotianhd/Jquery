@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>wrap</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('#btn').click(function(){
+        var newElem = $('<div></div>').css({border:'1px solid blue',margin:'10px'});
+        $('.name').wrap(newElem);
+      });
+
+      $('#btn2').click(function(){
+        var newElem1 = $('<div></div>').css({border:'1px solid red',margin:'10px'});
+        $('.name').wrapAll(newElem1);
+      });
+
+      $('#btn3').click(function(){
+        var newElem2 = $('<div></div>').css({border:'1px solid green',margin:'10px'});
+        $('.name').wrapInner(newElem2);
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="all">
+    <div class="name">123</div>
+    <div class="name">234</div>
+    <p class="new">hhhh</p>
+    <div class="name">345</div>
+
+    <div id="new">北京菜鸟在线</div>
+    <button id="btn">点击</button>
+    <button id="btn2">点击2</button>
+    <button id="btn3">点击3</button>
+  </div>
+</body>
+</html>

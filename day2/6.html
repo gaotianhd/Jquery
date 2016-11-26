@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#btn').click(function(){
+        console.log($('#new').contents());
+        $('#new').replaceWith(function(index){
+          console.log(index);
+          return $('#name').html($(this).contents());
+        });
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <div id="all">
+    <div class="new">123</div>
+    <p class="new">全栈开发</p>
+    <div id="new">北京菜鸟在线</div>
+    <p id="name"></p>
+    <button id="btn">点击</button>
+  </div>
+</body>
+</html>

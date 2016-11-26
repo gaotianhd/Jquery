@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="../css/jquery-ui.min.css" charset="utf-8">
+  <style media="screen">
+    div{
+      color: white;
+      background-color: #aaa;
+      font-size: 25px;
+      padding: 10px;
+      text-align: center;
+      border: 5px solid #dedede;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function(){
+      $('#btn').button().click(function(){
+        $('#div1').animate({
+          color: 'green',
+          backgroundColor:"rgb(20,20,20)",
+          borderColor:"blue"
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="btn">按钮</button>
+  <hr>
+  <div id="div1">变色</div>
+</body>
+</html>

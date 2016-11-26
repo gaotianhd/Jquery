@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>appendTo</title>
+  <style media="screen"></style>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+    $('#btn').click(function(){
+      $('<span>教育科技有限公司</span>').prependTo('#new');
+      $('.new').prependTo($('#new'));
+      $('#new').prepend(function(index,html){
+        return ($('.name'));
+        });
+      });
+    });
+
+  </script>
+</head>
+<body>
+
+  <div id="new">北京菜鸟在线</div>
+  <div class="name">haha</div>
+  <div class="name">hah</div>
+  <p class="new">全栈开发</p>
+  <button type="button" name="button" id="btn">点击</button>
+</body>
+</html>

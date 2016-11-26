@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+  <style>
+  p { margin: 4px; font-size:16px; font-weight:bolder; }
+ .blue { color:blue; }
+ .under { text-decoration:underline; }
+ .highlight { background:yellow;  display: inline;}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <p class="blue under">Hello</p>
+    <p class="blue under highlight">and</p>
+    <p class="blue under">then</p>
+    <p class="blue under">Goodbye</p>
+    <button type="button" name="button" id="btn">点击</button>
+<script>
+$('#btn').click(function(){
+  $("p:first").removeClass("blue");
+  $("p:eq(1)").removeClass().addClass("highlight");
+  $('p:last').removeClass(function() {
+      console.log($(this).prev().attr('class'));
+    return $(this).prev().attr('class');
+  });
+});
+
+</script>
+
+</body>
+</html>

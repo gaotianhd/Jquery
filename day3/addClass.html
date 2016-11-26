@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <style media="screen">
+    p{
+      margin: 8px;
+      font-size: 16px;
+    }
+    .selected{
+      color: blue;
+    }
+    .highlight{
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+  <p id="q" class="selected">Hello</p>
+  <p>and</p>
+  <p>Goodbye</p>
+  <div></div>
+  <div id="div">
+    <img src="" alt="" />
+    <img src="" alt="" />
+  </div>
+  <script type="text/javascript">
+  $('p').click(function(){
+    $('p').last().addClass("selected");
+  });
+    $('p').first().addClass(function(index,currentClass){
+      console.log(currentClass);
+      var myred;
+      if(currentClass == "selected"){
+        myred = "highlight";
+        $('div').text("第一个P标签字体改为蓝色，背景黄色")
+
+      }
+      return myred;
+    });
+  </script>
+</body>
+</html>

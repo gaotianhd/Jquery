@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" language="javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('div#one').click(function(){
+        $(this).hide();
+      });
+      $('div#two').click(function(){
+        $(this).hide("slow");
+      });
+      $('div#three').click(function(){
+        $(this).hide(1000,function(){
+          $(this).detach();
+        });
+      });
+
+      $('button#one').click(function(){
+        $('div#one').show()
+      });
+      $('button#two').click(function(){
+        $('div#two').show(1500,function(){
+          $('div#two').css('color','red');
+        });
+      });
+      $('button#three').click(function(){
+        $('div#three').show()
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <h2>点击下面的字，会有不同的隐藏效果</h2>
+  <button id="one">第一个马上显出来</button>
+  <button id="two">第二个有延时.</button>
+  <button id="tree">马上显出来</button>
+  <div id="one">点击这里，马上消失</div>
+  <div id="two">点击这里，会有延迟</div>
+  <div id="three">点击这里，用remove删除</div>
+</body>
+</html>

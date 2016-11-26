@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript代码检测页面元素</title>
+    <script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
+<style type="text/css">
+       body{font-size:12px;text-align:center}
+</style>
+<script type="text/javascript">
+    // window.onload=function(){
+    //  if(document.getElementById("divT"))
+    //    {
+    //     var oDiv=document.getElementById("divT");
+    //     oDiv.innerHTML="这是一个检测页面";
+    //    }
+    // }
+    $(function(){
+       $("#divT").html("这是一个检测页面");
+      //  $(".box > p").css("color","red");
+       $(".box").children('p').css("color","red");
+      //  $(".box + div").css("color","red");
+      $(".box").next("div").css("color","red");
+      // $(".box ~ div").css("color","red");
+      $(".box").nextAll("div").css("color","red");
+
+      // $('.box').prev('p').css('color','red');//同级上一个元素
+      // $('.box').prevAll('p').css('color','red');//同级上面所有的元素
+      // $('.box').prevUntil('p').css('color','red');//同级上非指定元素选定，遇到则停止
+      // $('.box').nextUntil('p').css('color','red');//同级下非指定元素选定，遇到则停止
+      // $('.box').siblings('p').css('color','red');//siblings()方法正好集成了prevAll()和nextAll()两个功能的效果，及上下相邻的所有元素进行选定：
+    })
+
+</script>
+</head>
+<body>
+    <div id="divT">
+
+    </div>
+    <div>
+      <div class="box">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+      </div>
+      <div class="div1">div1</div>
+      <div class="div2">div2</div>
+
+    </div>
+</body>
+</html

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo for CSS</title>
+    <script type="text/javascript" language="javascript" src="js/jquery-3.1.1.min.js"></script>
+    <style type="text/css">
+        *{
+          margin: 0;
+          padding: 0;
+
+        }
+        html,body{
+          width: 100%;
+          height: 100%;
+        }
+        .devDefalut {
+            width: 200px;
+            height: 300px;
+            font-size: 10pt;
+            padding: 5px;
+            background: url("./images/suolong1.jpg");
+            background-size: cover;
+            transition: all 1s linear;
+        }
+        .divClick {
+            width: 400px;
+            height: 600px;
+            border: solid 1px #666;
+            font-size: 10pt;
+            background-color: #eee;
+            padding: 5px;
+            position: absolute;
+            left: 50%;
+            margin-left: -250px;
+            top: 50%;
+            margin-top: -250px;
+            background: url("./images/suolong1.jpg");
+            background-size: cover;
+            transition: all 1s linear;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function (event) {
+            $("#divDefalut").click(function (event) {
+                $(this).addClass("divClick");
+                event.stopPropagation();
+            });
+        })
+
+        $(document).ready(function(event){
+          $(document).click(function(event){
+            if($("#divDefalut").hasClass("divClick")){
+              $("#divDefalut").toggleClass("divClick");
+              }
+          });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="divDefalut" class="devDefalut">点击的样式!!!</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试页面</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script>
+        document.open();
+    document.write('测试开始...............................');
+        document.close();
+</script>
+<script>
+ $(function(){
+    alert('DOM资源已经加载完成！');
+ })
+</script>
+</head>
+    <!--body onload IE浏览器支持-->
+    <body onload="alert('body on load!');">
+        <div id="content">
+            <div></div>
+        </div>
+        <script>
+        //绑定window.onload事件
+        window.onload = function(){
+            alert('页面全部资源已经加载完成1');
+        };
+        document.write('测试结束...............................');
+        </script>
+    </body>
+</html>
